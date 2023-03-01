@@ -1,6 +1,16 @@
 @use "./partials/reset.scss";
 
 .container{
-    max-width: 900px;
+    max-width: 1300px;
     margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-auto{
+    flex-basis:0;
+    flex-grow: 1;
 }
