@@ -14,3 +14,19 @@
     flex-basis:0;
     flex-grow: 1;
 }
+
+.col12{
+    flex-basis: 100%;
+}
+
+.col-6{
+    flex-basis: 50%
+}
+
+.col-4{
+    flex-basis: calc(100%/12*4);
+}
+
+.wrap{
+    flex-wrap: wrap;
+}

@@ -44,7 +44,7 @@
 
         &.active{
             color: cornflowerblue;
-            border-bottom: 4px solid cornflowerblue;
+            border-bottom: 8px solid cornflowerblue;
         }
     }
 
