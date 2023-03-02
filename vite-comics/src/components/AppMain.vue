@@ -149,9 +149,10 @@
 
     .card {
         flex-basis: 16%;
-        flex-grow: 1;
+        
         padding: 1rem ;
         display: flex;
+        flex-direction: column;
         row-gap: 0;
         flex-wrap: wrap;
         align-content: start;
