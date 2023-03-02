@@ -129,7 +129,7 @@
         color: white;
         background-image:url("/img/jumbotron.jpg");
         background-size: cover;
-        padding-top: 20rem;
+        padding-top: 24rem;
     }
 
     .title{
@@ -150,9 +150,11 @@
     .card {
         flex-basis: 16%;
         flex-grow: 1;
-        padding: 1em;
+        padding: 1rem ;
         display: flex;
+        row-gap: 0;
         flex-wrap: wrap;
+        align-content: start;
     }
 
     
