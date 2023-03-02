@@ -9,21 +9,19 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div v-for="(comic,i) in comics" :key="i" class="col-auto card">
+                <div class="row cards">
+                    <div v-for="(comic,i) in comics" :key="i" class="card">
                         
                         
-                        <img class="card-image" :src="thumb" alt="pic">
+                        <img class="card-image" :src="comics[i].thumb" alt="pic">
                         
-                        <h5>{{comics.series}}</h5>
+                        <h5 class="description">{{comics[i].series}}</h5>
                        
                             
                         
                     </div>
 
-                    <div class="col-auto">
-                        <div class="card">ciao</div>
-                    </div>
+  
                 </div>
 
                 <div class="row">
@@ -42,10 +40,9 @@
     export default{
         data() {
             return{
-                comics:{
+                comics:
                     [
-                    {
-                        thumb: "https://pbs.twimg.com/media/DEns6v4V0AApDZN.jpg",
+                    {  thumb: "https://pbs.twimg.com/media/DEns6v4V0AApDZN.jpg",
                         price: "$19.99",
                         series: "Action Comics",
                         type: "comic book"
@@ -117,7 +114,7 @@
                         type: "graphic novel"
                     }
 ]
-                }
+                
 
             }
         }
@@ -145,19 +142,33 @@
         margin-bottom: 1rem;
     }
     
+    .cards{
+        row-gap: 0.75rem;
+        flex-wrap: wrap;
+    }
 
     .card {
+        flex-basis: 16%;
+        flex-grow: 1;
         padding: 1em;
-        
+        display: flex;
+        flex-wrap: wrap;
     }
 
     
    
 
     .card-image{
-        max-width: 20%;
+        
+        max-height: 180px;
+        flex-shrink: 0;
+        margin-bottom: 1rem;
         aspect-ratio: 1;
         object-fit: cover;
+    }
+
+    .description{
+        text-transform: uppercase;
     }
 
 
