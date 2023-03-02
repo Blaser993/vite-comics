@@ -1,55 +1,17 @@
 <template>
-    <main class="content">
-        <div class="container-full">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-auto title">
-                        <h2>current series</h2>
-                    </div>
-                </div>
-
-                <!-- <div class="row cards">
-                    <div v-for="(comic,i) in comics" :key="i" class="card">
-                        
-                        
-                        <img class="card-image" :src="comics[i].thumb" alt="pic">
-                        
-                        <h5 class="description">{{comics[i].series}}</h5>
-                       
-                            
-                        
-                    </div>
-
-  
-                </div> -->
-
-                <Card></Card>
-
-                <div class="row">
-                    <col-auto class="cta">
-                        <button>load now</button>
-                    </col-auto>
-                </div>
-
-            </div>
-
+    <div class="row cards">
+        <div v-for="(comic,i) in comics" :key="i" class="card">
+            <img class="card-image" :src="comics[i].thumb" alt="pic">
+            <h5 class="description">{{comics[i].series}}</h5> 
         </div>
-    </main>
+    </div>
 </template>
 
 <script>
-    import Card from './Cards.vue'
-
     export default{
-        components:{
-            Card
-        },
-
-        data() {
+        data(){
             return{
-                comics:
-                    [
+                comics:[
                     {  thumb: "https://pbs.twimg.com/media/DEns6v4V0AApDZN.jpg",
                         price: "$19.99",
                         series: "Action Comics",
@@ -126,29 +88,9 @@
         }
     }
 </script>
-
-<style lang="scss" scoped>
-    .content{
-        align-items: center;
-        min-height: 100px;
-        background-color: black;
-        color: white;
-        background-image:url("/img/jumbotron.jpg");
-        background-size: cover;
-        padding-top: 24rem;
-    }
-
-    .title{
-        font-size: 20px;
-        text-transform: uppercase;
-        background-color: cornflowerblue;
-        max-width: fit-content;
-        padding: 0.5rem 2.5rem;
-        margin-top: -2rem;
-        margin-bottom: 1rem;
-    }
     
-    .cards{
+<style lang="scss" scoped>
+        .cards{
         row-gap: 0.75rem;
         flex-wrap: wrap;
     }
@@ -177,22 +119,5 @@
 
     .description{
         text-transform: uppercase;
-    }
-
-
- 
-
-    .container-full{
-        width: 100%;
-        background-color: rgb(48, 48, 48);
-    }
-
-
-    .cta{
-        text-align: center;
-        align-items: center;
-        align-content: center;
-        align-self: center;
-        justify-self: center;
     }
 </style>
